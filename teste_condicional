@@ -1,0 +1,18 @@
+def verificar_velocidade():
+    try:
+        velocidade = float(input("Digite a velocidade do carro em km/h: "))
+        limite_velocidade = 80.0
+        valor_multa_por_km = 20.0
+
+        if velocidade > limite_velocidade:
+            excesso = velocidade - limite_velocidade
+            valor_multa = excesso * valor_multa_por_km
+            print(f"Você foi multado! Excedeu o limite de velocidade em {excesso:.2f} km/h.")
+            print(f"O valor da multa é de R${valor_multa:.2f}.")
+        else:
+            print("Você está dentro do limite de velocidade.")
+    except ValueError:
+        print("Por favor, insira um valor numérico válido para a velocidade.")
+
+# Executar a função
+verificar_velocidade()
